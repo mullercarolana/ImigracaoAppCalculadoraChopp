@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Button, View, SafeAreaView, Text, Image } from 'react-native';
+import { StyleSheet, Vibration, Button, View, SafeAreaView, Text, Image } from 'react-native';
 
 function HomeScreen({ navigation }) {
     return (
@@ -17,7 +17,7 @@ function HomeScreen({ navigation }) {
                 <Button
                     title="Sim"
                     color="#DBBC1A"
-                    onPress={() => navigation.navigate('Calculator')}
+                    onPress={() => Vibration.vibrate(navigation.navigate('Calculator'))}
                 />
             </View>
         </SafeAreaView>

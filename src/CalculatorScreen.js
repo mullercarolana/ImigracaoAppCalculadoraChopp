@@ -1,12 +1,12 @@
 import React from 'react';
-import { StyleSheet, Button, View, SafeAreaView, Text, TextInput } from 'react-native';
+import { StyleSheet, Vibration, Button, View, SafeAreaView, Text, TextInput } from 'react-native';
 
 const CalculatorScreen = () => {
     const [number1, onChangeText1] = React.useState(null);
     const [number2, onChangeText2] = React.useState(null);
     const [count, setCount] = React.useState(0);
 
-    const onPress = () => setCount(1.5 * number1 * number2);
+    const onPress = () => Vibration.vibrate(setCount(1.5 * number1 * number2));
 
     return (
         <SafeAreaView style={styles.container}>
